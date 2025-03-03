@@ -29,9 +29,30 @@
 		7CCE0E202D75512000F8E84B /* AlarmClockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlarmClockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		7CCE0E3C2D75750800F8E84B /* Exceptions for "AlarmClock" folder in "AlarmClockTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				AlarmPillView.swift,
+			);
+			target = 7CCE0E152D75512000F8E84B /* AlarmClockTests */;
+		};
+		7CCE0E3D2D75750800F8E84B /* Exceptions for "AlarmClock" folder in "AlarmClockUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				AlarmPillView.swift,
+			);
+			target = 7CCE0E1F2D75512000F8E84B /* AlarmClockUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		7CCE0E082D75511E00F8E84B /* AlarmClock */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				7CCE0E3C2D75750800F8E84B /* Exceptions for "AlarmClock" folder in "AlarmClockTests" target */,
+				7CCE0E3D2D75750800F8E84B /* Exceptions for "AlarmClock" folder in "AlarmClockUITests" target */,
+			);
 			path = AlarmClock;
 			sourceTree = "<group>";
 		};
