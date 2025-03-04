@@ -34,6 +34,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				AlarmPillView.swift,
+				CreateAlarmView.swift,
 			);
 			target = 7CCE0E152D75512000F8E84B /* AlarmClockTests */;
 		};
@@ -41,6 +42,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				AlarmPillView.swift,
+				CreateAlarmView.swift,
 			);
 			target = 7CCE0E1F2D75512000F8E84B /* AlarmClockUITests */;
 		};
