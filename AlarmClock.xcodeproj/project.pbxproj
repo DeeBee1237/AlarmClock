@@ -33,6 +33,7 @@
 		7CCE0E3C2D75750800F8E84B /* Exceptions for "AlarmClock" folder in "AlarmClockTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				AlarmDate.swift,
 				AlarmPillView.swift,
 				CreateAlarmView.swift,
 			);
@@ -41,6 +42,7 @@
 		7CCE0E3D2D75750800F8E84B /* Exceptions for "AlarmClock" folder in "AlarmClockUITests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				AlarmDate.swift,
 				AlarmPillView.swift,
 				CreateAlarmView.swift,
 			);

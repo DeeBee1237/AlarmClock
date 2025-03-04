@@ -12,6 +12,9 @@ struct ContentView: View {
     // use this for the navigation stack
     @State private var path: [String] = []
     
+    // TODO: move this to the view model
+    @State private var alarmList: [AlarmDate] = []
+    
     var body: some View {
         
         NavigationStack (path: $path) {
@@ -20,17 +23,21 @@ struct ContentView: View {
                 
                 ScrollView {
                     
-                    AlarmPillView(time: "9:48 AM", date: "4 Monday 2025")
-                    AlarmPillView(time: "9:48 AM", date: "4 Monday 2025")
-                    AlarmPillView(time: "9:48 AM", date: "4 Monday 2025")
-                    AlarmPillView(time: "9:48 AM", date: "4 Monday 2025")
-                    AlarmPillView(time: "9:48 AM", date: "4 Monday 2025")
-                    AlarmPillView(time: "9:48 AM", date: "4 Monday 2025")
-                    AlarmPillView(time: "9:48 AM", date: "4 Monday 2025")
-                    AlarmPillView(time: "9:48 AM", date: "4 Monday 2025")
-                    AlarmPillView(time: "9:48 AM", date: "4 Monday 2025")
-                    AlarmPillView(time: "9:48 AM", date: "4 Monday 2025")
-                    AlarmPillView(time: "9:48 AM", date: "4 Monday 2025")
+                    ForEach(alarmList) { alarmDate in
+                        AlarmPillView(time: alarmDate.getFormattedTime() , date: alarmDate.getFormattedDate())
+                    }
+                    
+//                    AlarmPillView(time: "9:48 AM", date: "4 Monday 2025")
+//                    AlarmPillView(time: "9:48 AM", date: "4 Monday 2025")
+//                    AlarmPillView(time: "9:48 AM", date: "4 Monday 2025")
+//                    AlarmPillView(time: "9:48 AM", date: "4 Monday 2025")
+//                    AlarmPillView(time: "9:48 AM", date: "4 Monday 2025")
+//                    AlarmPillView(time: "9:48 AM", date: "4 Monday 2025")
+//                    AlarmPillView(time: "9:48 AM", date: "4 Monday 2025")
+//                    AlarmPillView(time: "9:48 AM", date: "4 Monday 2025")
+//                    AlarmPillView(time: "9:48 AM", date: "4 Monday 2025")
+//                    AlarmPillView(time: "9:48 AM", date: "4 Monday 2025")
+//                    AlarmPillView(time: "9:48 AM", date: "4 Monday 2025")
 
                 }
                 
@@ -39,7 +46,7 @@ struct ContentView: View {
             .navigationTitle("Alarm")
             .navigationDestination(for: String.self) { pathValue in
                 if pathValue == "CreateAlarmView" {
-                    CreateAlarmView(path: $path)
+                    CreateAlarmView(path: $path, alarmList: $alarmList)
                 }
             }
             .toolbar {
