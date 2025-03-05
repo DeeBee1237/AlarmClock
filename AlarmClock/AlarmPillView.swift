@@ -31,6 +31,16 @@ struct AlarmPillView: View {
                 Text(model.alarmObject.getFormattedDate())
                 Toggle("", isOn: $isAlarmSwitchOn)
                     .labelsHidden()
+                    .onChange(of: isAlarmSwitchOn /*, initial: true???*/) { oldValue, newValue in
+                        // TODO: set or else remove the alarm
+                        
+                        if newValue {
+                            self.model.setAlarm()
+                        } else {
+                            self.model.removeAlarm()
+                        }
+                        
+                    }
             }
             .padding(.trailing, 12)
 
