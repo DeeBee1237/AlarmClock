@@ -24,21 +24,9 @@ struct ContentView: View {
                 ScrollView {
                     
                     ForEach(alarmList) { alarmDate in
-                        AlarmPillView(time: alarmDate.getFormattedTime() , date: alarmDate.getFormattedDate())
+                        AlarmPillView(model: AlarmPillViewModel(alarmObject: alarmDate))
                     }
                     
-//                    AlarmPillView(time: "9:48 AM", date: "4 Monday 2025")
-//                    AlarmPillView(time: "9:48 AM", date: "4 Monday 2025")
-//                    AlarmPillView(time: "9:48 AM", date: "4 Monday 2025")
-//                    AlarmPillView(time: "9:48 AM", date: "4 Monday 2025")
-//                    AlarmPillView(time: "9:48 AM", date: "4 Monday 2025")
-//                    AlarmPillView(time: "9:48 AM", date: "4 Monday 2025")
-//                    AlarmPillView(time: "9:48 AM", date: "4 Monday 2025")
-//                    AlarmPillView(time: "9:48 AM", date: "4 Monday 2025")
-//                    AlarmPillView(time: "9:48 AM", date: "4 Monday 2025")
-//                    AlarmPillView(time: "9:48 AM", date: "4 Monday 2025")
-//                    AlarmPillView(time: "9:48 AM", date: "4 Monday 2025")
-
                 }
                 
             }

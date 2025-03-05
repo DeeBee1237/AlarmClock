@@ -11,21 +11,24 @@ struct AlarmPillView: View {
     
     @State private var isAlarmSwitchOn = true
     
-    let time: String
-    let date: String
+    private let model: AlarmPillViewModel
+    
+    init(model: AlarmPillViewModel) {
+        self.model = model
+    }
     
     var body: some View {
         
         HStack {
 
-            Text(time)
+            Text(model.alarmObject.getFormattedTime())
                 .padding(.leading, 12)
             
             Spacer()
             
             HStack {
                 
-                Text(date)
+                Text(model.alarmObject.getFormattedDate())
                 Toggle("", isOn: $isAlarmSwitchOn)
                     .labelsHidden()
             }
@@ -43,5 +46,5 @@ struct AlarmPillView: View {
 }
 
 #Preview {
-    AlarmPillView(time: "9:48 AM", date: "4 Monday 2025")
+    AlarmPillView(model: AlarmPillViewModel(alarmObject: AlarmDate(date: Date.now)))
 }
